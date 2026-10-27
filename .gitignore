@@ -1,0 +1,24 @@
+# dependencias
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# variables de entorno (NEXT_PUBLIC_API_HOST va en Vercel, no en el repo)
+.env*
+!.env.example
+
+# varios
+.DS_Store
+Thumbs.db
+*.pem
+npm-debug.log*
+.vercel
+.vscode
+.idea

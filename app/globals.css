@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/*
+ * Identidad visual de la Entrega 1 convertida en tokens de Tailwind:
+ * se usan como bg-cream, text-wood-dark, border-line, etc.
+ */
+@theme {
+  --color-cream: #f5f1e8;
+  --color-surface: #ffffff;
+  --color-ink: #222222;
+  --color-muted: #666666;
+
+  --color-wood-dark: #3b2a20;
+  --color-wood: #6b4f3a;
+  --color-wood-light: #a67c52;
+  --color-wood-hover: #6f4727;
+
+  --color-line: #dddddd;
+  --color-field: #bbbbbb;
+  --color-placeholder: #e8e4dc;
+
+  --color-danger: #b83232;
+  --color-success: #2f6b3f;
+  --color-success-bg: #eef6f0;
+
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Foco visible con teclado en todos los elementos interactivos, como en la Entrega 1 */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-wood-light);
+  outline-offset: 3px;
+}
+
+/* Reducir animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
